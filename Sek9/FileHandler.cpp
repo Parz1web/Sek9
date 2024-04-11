@@ -11,7 +11,7 @@ std::string FileHandler::readTextFile() {
         return content;
     }
     else {
-        return "Файл не найден";
+        return "File not found";
     }
 }
 
@@ -20,10 +20,10 @@ std::string FileHandler::writeTextFile(std::string content) {
     if (file.is_open()) {
         file << content;
         file.close();
-        return "Файл успешно записан";
+        return "File successfully written";
     }
     else {
-        return "Не удалось записать файл";
+        return "Unable to write to file";
     }
 }
 
@@ -44,9 +44,9 @@ std::string FileHandler::writeBytesFile(std::vector<char> content) {
     if (file.is_open()) {
         file.write(content.data(), content.size());
         file.close();
-        return "Файл успешно записан";
+        return "File successfully written";
     }
     else {
-        return "Не удалось записать в файл";
+        return "Unable to write to file";
     }
 }
